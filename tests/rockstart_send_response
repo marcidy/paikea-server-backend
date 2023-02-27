@@ -1,0 +1,5 @@
+resp.content                                                                                            
+b'<?xml version="1.0" encoding="UTF-8"?>\r\n<SendMessage><receipt messageId="124196" /></SendMessage>\r\n'
+
+resp.text                                                                                               
+'<?xml version="1.0" encoding="UTF-8"?>\r\n<SendMessage><receipt messageId="124196" /></SendMessage>\r\n'

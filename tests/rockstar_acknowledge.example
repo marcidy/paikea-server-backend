@@ -1,0 +1,27 @@
+data: b'{"txAt":"2020-09-03T21:10:45Z","temp":0.0,"iridium_latitude":37.8192,"JWT":"eyJhbGciOiJSUzI1NiJ9.eyJpc3Mi
+OiJSb2NrIDciLCJpYXQiOjE1OTkxNjc0NTAsImF0IjoiMjAyMC0wOS0wM1QyMToxMDo0N1oiLCJiYXR0ZXJ5IjoiMCIsImNlcCI6IjMiLCJkZXZpY
+2VfdHlwZSI6IkxFT1BBUkQzIiwiaWQiOiJnd3lOUHBEbWViSkxCWG1OeWF3eG5vQVJxeE1kWk9WRyIsImltZWkiOiIzMDA1MzQwNjAyNTc0NTAiLC
+JpcmlkaXVtX2xhdGl0dWRlIjoiMzcuODE5MiIsImlyaWRpdW1fbG9uZ2l0dWRlIjoiLTEyMi4yNjU1IiwibWVzc2FnZV9hY2siOiIxMjQxOTYiLCJ
+tb21zbiI6IjM2IiwicG93ZXIiOiJmYWxzZSIsInNlcmlhbCI6IjI1MjM4Iiwic291cmNlIjoiSVJJRElVTSIsInRlbXAiOiIwLjAiLCJ0cmFuc21p
+dF90aW1lIjoiMjAyMC0wOS0wM1QyMToxMDo0NVoiLCJ0cmFuc3BvcnQiOiJJUklESVVNIiwidHJpZ2dlciI6IkFDS05PV0xFREdFIiwidHhBdCI6I
+jIwMjAtMDktMDNUMjE6MTA6NDVaIn0.ee5YnRv0n0vmw0l2j2muBs7cRyah2JOa3eEAL9hmaJ8B1YSKqnMhFfQfYVaiSrfw4opH00MoUIrLOzXaxu
+Z4Hh4hJe5rqIeUuSaYTyzy4J2pANRRXz1xFHFQXLJGty9mZ992vu5doxlB8LDliiv4A_nmVU3A7FQdW1DX5XoJ0n5ESAx3P9KiftcBr6LbEYz_96M
+6r10oUwoKaZGeeOx2100R47XPjrmFF3AywKsickTZ3QKQX3JUrsAAuqzu2Pl6jGfbiFa6Wk2dTBiflA3AjTZhjdC6HSgK3T8iaZKEQuZ0uZZlTJkG
+wwyagwrF5gpN0za-aMDXgooTsT8QvTpIAg","device_type":"LEOPARD3","transport":"IRIDIUM","source":"IRIDIUM","trigger":"
+ACKNOWLEDGE","message_ack":124196,"iridium_longitude":-122.2655,"battery":0,"cep":3,"momsn":36,"at":"2020-09-03T2
+1:10:47Z","serial":25238,"imei":"300534060257450","id":"gwyNPpDmebJLBXmNyawxnoARqxMdZOVG","power":false,"transmit
+_time":"2020-09-03T21:10:45Z"}'
+json: {'txAt': '2020-09-03T21:10:45Z', 'temp': 0.0, 'iridium_latitude': 37.8192, 'JWT': 'eyJhbGciOiJSUzI1NiJ9.eyJ
+pc3MiOiJSb2NrIDciLCJpYXQiOjE1OTkxNjc0NTAsImF0IjoiMjAyMC0wOS0wM1QyMToxMDo0N1oiLCJiYXR0ZXJ5IjoiMCIsImNlcCI6IjMiLCJk
+ZXZpY2VfdHlwZSI6IkxFT1BBUkQzIiwiaWQiOiJnd3lOUHBEbWViSkxCWG1OeWF3eG5vQVJxeE1kWk9WRyIsImltZWkiOiIzMDA1MzQwNjAyNTc0N
+TAiLCJpcmlkaXVtX2xhdGl0dWRlIjoiMzcuODE5MiIsImlyaWRpdW1fbG9uZ2l0dWRlIjoiLTEyMi4yNjU1IiwibWVzc2FnZV9hY2siOiIxMjQxOT
+YiLCJtb21zbiI6IjM2IiwicG93ZXIiOiJmYWxzZSIsInNlcmlhbCI6IjI1MjM4Iiwic291cmNlIjoiSVJJRElVTSIsInRlbXAiOiIwLjAiLCJ0cmF
+uc21pdF90aW1lIjoiMjAyMC0wOS0wM1QyMToxMDo0NVoiLCJ0cmFuc3BvcnQiOiJJUklESVVNIiwidHJpZ2dlciI6IkFDS05PV0xFREdFIiwidHhB
+dCI6IjIwMjAtMDktMDNUMjE6MTA6NDVaIn0.ee5YnRv0n0vmw0l2j2muBs7cRyah2JOa3eEAL9hmaJ8B1YSKqnMhFfQfYVaiSrfw4opH00MoUIrLO
+zXaxuZ4Hh4hJe5rqIeUuSaYTyzy4J2pANRRXz1xFHFQXLJGty9mZ992vu5doxlB8LDliiv4A_nmVU3A7FQdW1DX5XoJ0n5ESAx3P9KiftcBr6LbEY
+z_96M6r10oUwoKaZGeeOx2100R47XPjrmFF3AywKsickTZ3QKQX3JUrsAAuqzu2Pl6jGfbiFa6Wk2dTBiflA3AjTZhjdC6HSgK3T8iaZKEQuZ0uZZ
+lTJkGwwyagwrF5gpN0za-aMDXgooTsT8QvTpIAg', 'device_type': 'LEOPARD3', 'transport': 'IRIDIUM', 'source': 'IRIDIUM',
+ 'trigger': 'ACKNOWLEDGE', 'message_ack': 124196, 'iridium_longitude': -122.2655, 'battery': 0, 'cep': 3, 'momsn'
+: 36, 'at': '2020-09-03T21:10:47Z', 'serial': 25238, 'imei': '300534060257450', 'id': 'gwyNPpDmebJLBXmNyawxnoARqx
+MdZOVG', 'power': False, 'transmit_time': '2020-09-03T21:10:45Z'}
+

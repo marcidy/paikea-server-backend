@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}Paikea{% endblock title %}</title>
+    {% block head_favicon %}
+      <!-- link rel="icon" type="image/png" href="/static/images/favicon.ico" -->
+    {% endblock head_favicon %}
+    {% block head_meta %}
+      {% block head_meta_charset %}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      {% endblock head_meta_charset %}
+      {% block head_meta_viewport %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {% endblock head_meta_viewport %}
+    {% endblock head_meta %}
+    {% block head_css %}
+      {% block head_css_lib %}
+      {% endblock head_css_lib %}
+      {% block head_css_site %}
+        <link href="{{ url_for('static', filename='css/paikea.css') }}" rel="stylesheet" media="screen">
+      {% endblock head_css_site %}
+      {% block head_css_section %}{% endblock head_css_section %}
+      {% block head_css_page %}{% endblock head_css_page %}
+    {% endblock head_css %}
+    {% block head_script_section %}
+    {% endblock head_script_section %}
+  </head>
+  <body>
+
+    <div id="content">
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+      <!-- Footer -->
+      <div class="container footer">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-3">
+          </div>
+        </div>
+      </div>
+    {% endblock footer %}
+    </div> <!-- end content -->
+
+    <!-- External scripts -->
+    <!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script -->
+    <!--script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script -->
+
+  </body>
+</html>

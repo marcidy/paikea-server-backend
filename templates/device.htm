@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card" id="messages-card">
+    <div class="card-header" id="messages-card-header">Log</div>
+    <div class="card-body" id="messages">
+    </div>
+</div>
+<div class="card" id="device">
+    <div class="card-header" id="summary">Device Information</div>
+    <div class="card-body" id="summary-body">
+        <table class="device-table">
+            <tr><td class="key">Device ID</td><td><span id="iam"></span></td></tr>
+            <tr><td class="key">Device Type</td><td><span id="dev"></span></td></tr>
+            <tr><td class="key">Battery</td><td><span id="batt_main_v"></span> Volts</td></tr>
+        </table>
+        <button id="service">Return to Service</button><br >
+        <select id="app">
+            <option value="ota">ota</option>
+            <option value="buoy">buoy</option>
+            <option value="handset">handset</option>
+            <option value="shell">shell</option>
+            <option value="irdbase">irdbase</option>
+            <option value="lorabase">lorabase</option>
+            <option value="lora_sender">loRa sender</option>
+            <option value="lora_receiver">loRa receiver</option>
+        </select>
+        <button id="switch-app">Switch app</button><br >
+        <button id="reset">Reset</button>
+
+        <div class="card" id="firmware">
+            <div class="card-header" id="firmware-card-header">Device Firmware</div>
+            <div class="card-body" id="firmware-card-body">
+                <table class="device-table">
+                    <tr><td class="key">Update Available</td><td><span id="firmware-avail"></span></td></tr>
+                    <tr><td class="key">Job ID</td><td><span id="firmware-job-id"></span></td></tr>
+                    <tr><td class="key">Job Status</td><td><span id="firmware-job-status"></span></td></tr>
+                </table>
+                <button id="upgrade-button"></button><br >
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="card" id="wifi-card">
+    <div class="card-header" id="wifi-card-header">Wifi Configuration</div>
+    <div class="card-body" id="wifi-card-body">
+        <div class="card" id="wifi-ap-card">
+            <div class="card-header" id="wifi-ap-card-header">Access Point</div>
+            <div class="card-body" id="wifi-ap-card-body">
+                <table class="device-table">
+                    <tr><td class="key">Enabled</td><td><span id="wifi_ap_active"></span></td></tr>
+                    <tr><td class="key">SSID</td><td><span id="wifi_ap_ssid"></span></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="card" id=wifi-sta-card>
+            <div class="card-header" id="wifi-sta-card-header">Station</div>
+            <div class="card-body" id="wifi-sta-card-body">
+                <table class="device-table">
+                    <tr><td class="key">Enabled</td><td><span id="wifi_net_active"></span></td></tr>
+                    <tr><td class="key">MAC</td><td><span id="wifi_net_mac"></span></td></tr>
+                    <tr><td class="key">Connected</td><td><span id="wifi_net_connected"></span></td></tr>
+                    <tr><td class="key">Connected to AP</td><td><span id="wifi_net_ap"></span></td></tr>
+                    <tr><td class="key">IP</td><td><span id="wifi_net_ip"></span></td></tr>
+                    <tr><td class="key">Gateway</td><td><span id="wifi_net_gw"></span></td></tr>
+                    <tr><td class="key">DNS</td><td><span id="wifi_net_dns"></span></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="card" id="wifi-stor-card">
+            <div class="card-header" id="wifi-stor-card-header">Stored Settings</div>
+            <div class="card-body" id="wifi-stor-card-body">
+                <table class="device-table">
+                    <tr><td class="key">Stored SSID:</td><td> <span id="wifi_stored_ssid"></span></td></tr>
+                    <tr><td class="key">New SSID:</td><td><input type="text" id="ssid" name="ssid"></td></tr>
+                    <tr><td class="key">Password: </td><td><input type="text" id="pass" name="pass"></td></tr>
+                    <tr><td class="key">Last Test Result: </td><td><span id="wifi_test_result"></td></tr>
+                </table>
+                <button id="test_new_sta">Test</button>
+                <button id="store_new_sta">Save on Device</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card" id="drivers-card">
+    <div class="card-header" id="drivers-card-header">Hardware Drivers</div>
+    <div class="card-body" id="drivers-card-body">
+    </div>
+    <div class="card" id="driver-gps-card">
+        <div class="card-header" id="driver-gps-header">GPS</div>
+        <div class="card-body" id="driver-gps-body">
+            <table class="device-table">
+                <tr><td class="key">Enabled</td><td><span id="gps_enabled"></span></td></tr>
+                <tr><td class="key">Running</td><td><span id="gps_running"></span></td></tr>
+            </table>
+            <button id="gps_toggle">Start</button>
+            <div class="card" id="driver-gps-signal">
+                <div class="card-header" id="driver-gps-signal-header">Signal</div>
+                <div class="card-body" id="driver-gps-signal-body">
+                    <table class="device-table">
+                        <tr><td class="key">Fix</td><td><span id="gps_signal_fix"></span></td></tr>
+                        <tr><td class="key">Fix mode 1</td><td><span id="gps_signal_fix_mode1"></span></td></tr>
+                        <tr><td class="key">Fix mode 2</td><td><span id="gps_signal_fix_mode2"></span></td></tr>
+                        <tr><td class="key">Satellites</td><td><span id="gps_signal_num_sv"></span></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card" id="driver-gps-location">
+                <div class="card-header" id="driver-gps-location-header">Location</div>
+                <div class="card-body" id="driver-gps-location-body">
+                    <table class="device-table">
+                        <tr><td class="key">Time (UTC)</td><td><span id="gps_location_utc"></span></td></tr>
+                        <tr><td class="key">Latitude</td><td><span id="gps_location_NS"></span> <span id="gps_location_latitude"></span></td></tr>
+                        <tr><td class="key">Longitude</td><td><span id="gps_location_EW"></span> <span id="gps_location_longitude"></span></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="driver-rb-card">
+        <div class="card-header" id="driver-rb-header">RockBlock</div>
+        <div class="card-body" id="driver-rb-body">
+            <table class="device-table">
+                <tr><td class="key">Enabled</td><td><span id="rb_enabled"></span></td></tr>
+                <tr><td class="key">Running</td><td><span id="rb_running"></span></td></tr>
+            </table>
+            <button id="rb_toggle">Start</button>
+            <br >
+            <div class="card">
+                <div class="card-header" id="driver-rb-status-header">Status</div>
+                <div class="card-body" id="driver-rb-status-body">
+                    <table class="device-table">
+                        <tr><td class="key">Signal Quality</td><td><span id="rb_csq"></span></td></tr>
+                        <tr><td class="key">Pending Send</td><td><span id="rb_mo_flag"></span></td></tr>
+                        <tr><td class="key">Pending Receive</td><td><span id="rb_ra_flag"></span></td></tr>
+                        <tr><td class="key">Received</td><td><span id="rb_mt_flag"></span></td></tr>
+                        <tr><td class="key">Queued</td><td><span id="rb_queue"></span></td></tr>
+                        <tr><td class="key">MOMSN</td><td><span id="rb_momsn"></span></td></tr>
+                        <tr><td class="key">MTMSN</td><td><span id="rb_mtmsn"></span></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="driver-rb-message-header">Iridium Messages</div>
+                <div class="card-body" id="rb_messages">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="driver-lora-card">
+        <div class="card-header" id="driver-lora-header">LoRa</div>
+        <div class="card-body" id="driver-lora-body">
+            <table class="device-table">
+                <tr><td class="key">Running</td><td><span id="lora_running"></span></td></tr>
+                <tr><td class="key">Last Packet RSSI</td><td><span id="lora_rssi"></td></tr>
+            </table>
+            <button id="lora_toggle">Start</button>
+            <div class="card" id="lora-send-card">
+                <div class="card-header" id="lora-send-header">Send LoRa Message</div>
+                <div class="card-body" id="lora-send-body">
+                    <input type="text" id="lora-text" name="lora-text" maxlength="100" /><br >
+                    <button id="lora-send-msg">Send</button>
+                </div>
+            </div>
+            <div class="card" id="lora-messages-card">
+                <div class="card-header" id="lora-messages-header">LoRa Packets</div>
+                <div class="card-body" id="lora_messages">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+<script src="{{ url_for('static', filename='js/device.js') }}" type='module'></script>
+{% endblock %}
